@@ -28,7 +28,7 @@ public class Additional1 {
 
         System.out.println("Input str to delete");
         String str_to_del = inputter.nextLine();
-        FileWriter writer = new FileWriter("text_add2_output.txt", false);
+        FileWriter writer = new FileWriter("text_add1_output.txt", false);
         for (String line: lines){
             String new_line = line.replaceAll(str_to_del, "");
             System.out.println(new_line);

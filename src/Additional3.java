@@ -11,7 +11,7 @@ public class Additional3 {
         Scanner inputter = new Scanner(System.in);
         String original = inputter.nextLine();
         System.out.println("You entered: " + original);
-        String[] words_arr = original.split("[^[A-Za-z0-9А-Яа-яєЄІіЇї']]+");
+        String[] words_arr = original.split(" {1,}");
         System.out.println(String.format("Number of words: %d", words_arr.length));
     }
 }
