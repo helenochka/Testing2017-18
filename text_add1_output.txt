@@ -2,4 +2,6 @@ I want big bant
 Ant is new word
 let's delete "ant"
 antuan
-anton q
+anton q1233
+
+[^a-z]

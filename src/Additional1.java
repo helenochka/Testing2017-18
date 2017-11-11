@@ -27,7 +27,8 @@ public class Additional1 {
         Scanner inputter = new Scanner(System.in);
 
         System.out.println("Input str to delete");
-        String str_to_del = inputter.nextLine();
+        String str_to_del_user = inputter.nextLine();
+        String str_to_del = str_to_del_user.replaceAll("(\\W)\\1?", "\\\\$1");
         FileWriter writer = new FileWriter("text_add1_output.txt", false);
         for (String line: lines){
             String new_line = line.replaceAll(str_to_del, "");
