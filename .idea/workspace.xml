@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="544ce49c-7b75-4737-a121-973a27d23bed" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Additional1.java" afterPath="$PROJECT_DIR$/src/Additional1.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/text_add1_input.txt" afterPath="$PROJECT_DIR$/text_add1_input.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/text_add1_output.txt" afterPath="$PROJECT_DIR$/text_add1_output.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -109,8 +107,8 @@
       <file leaf-file-name="Additional1.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Additional1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="30" column="78" lean-forward="false" selection-start-line="30" selection-start-column="78" selection-end-line="30" selection-end-column="78" />
+            <state relative-caret-position="401">
+              <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -434,12 +432,12 @@
       <workItem from="1510244776160" duration="1823000" />
       <workItem from="1510252255093" duration="7181000" />
       <workItem from="1510331733738" duration="598000" />
-      <workItem from="1510396207296" duration="4686000" />
+      <workItem from="1510396207296" duration="5045000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74441000" />
+    <option name="totallyTimeSpent" value="74800000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="80" y="-11" width="1841" height="1092" extended-state="6" />
@@ -909,8 +907,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Additional1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="30" column="78" lean-forward="false" selection-start-line="30" selection-start-column="78" selection-end-line="30" selection-end-column="78" />
+        <state relative-caret-position="401">
+          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
