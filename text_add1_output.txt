@@ -3,5 +3,5 @@ Ant is new word
 let's delete "ant"
 antuan
 anton q1233
-[0-9]
-
+[09]
+[^az]
