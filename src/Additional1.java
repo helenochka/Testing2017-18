@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Additional1 {
-    public static final String standart_path = "text_add1_input.txt";
+    private static final String standart_path = "text_add1_input.txt";
     private static List<String> read_file(String filename){
         List<String> lines = new ArrayList<>();
         try{
