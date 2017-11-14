@@ -51,11 +51,11 @@ public class Task1 {
         System.out.println(list_add_mid_time);
         System.out.println(linklist_add_mid_time);
         begin = System.nanoTime();
-        a1.indexOf(1);
+        a1.contains(1);
         end = System.nanoTime();
         long list_search_time = end - begin;
         begin = System.nanoTime();
-        a2.indexOf(1);
+        a2.contains(1);
         end = System.nanoTime();
         long linked_list_search_time = end - begin;
         begin = System.nanoTime();
