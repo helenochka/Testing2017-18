@@ -3,14 +3,13 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.text.Collator;
 import java.util.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+
 
 
 public class Task5 {
     private static Collator comparator(List<String> w){
         for (String line: w){
-            if (! line.matches("^[А-Яа-яєЄІіЇїёЁ']+.*$")){//виправити це гавно
+            if (! line.matches(".*[А-Яа-яєЄІіЇїёЁ'].*")){//виправити це гавно
                 return Collator.getInstance(new Locale("en", "US"));
             }
             if (line.contains("ё")|| line.contains("Ё") || line.contains("ы")){//інакше нам покатить і укр коллатор
