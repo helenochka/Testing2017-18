@@ -1,8 +1,10 @@
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.text.Collator;
 import java.util.*;
+import java.io.FileReader;
 
 
 
@@ -23,7 +25,6 @@ public class Task5 {
         List<String> words = new ArrayList<>();
         try{
         List<String> lines = Files.readAllLines(Paths.get(filename));
-
         for (String line: lines){
             String[] words_arr = line.split("[^[A-Za-z0-9А-Яа-яєЄІіЇїёЁ']]+");
             words.addAll(Arrays.asList(words_arr));
