@@ -1,23 +1,38 @@
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.text.Collator;
+import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 
 public class Task5 {
+    private static Collator comparator(List<String> w){
+        for (String line: w){
+            if (! line.matches("^[А-Яа-яєЄІіЇїёЁ']+.*$")){//виправити це гавно
+                return Collator.getInstance(new Locale("en", "US"));
+            }
+            if (line.contains("ё")|| line.contains("Ё") || line.contains("ы")){//інакше нам покатить і укр коллатор
+                return Collator.getInstance(new Locale("ru", "RU"));
+            }
+        }
+        return Collator.getInstance(new Locale("uk", "UA"));
+
+    }
     private static List<String> read_file_and_sort(String filename){
         List<String> words = new ArrayList<>();
         try{
         List<String> lines = Files.readAllLines(Paths.get(filename));
 
         for (String line: lines){
-            String[] words_arr = line.split("[^[A-Za-z0-9А-Яа-яєЄІіЇї']]+");
+            String[] words_arr = line.split("[^[A-Za-z0-9А-Яа-яєЄІіЇїёЁ']]+");
             words.addAll(Arrays.asList(words_arr));
         }
-        System.out.println(words.toString());
-        words.sort(String :: compareToIgnoreCase);}
+        Collator comp = comparator(lines);
+            System.out.println(words.toString());
+        words.sort((x,y)-> comp.compare(x.toLowerCase(), y.toLowerCase()));
+        }
         catch (IOException ex){
             System.out.println("Некоректний вхідний файл");
         }
