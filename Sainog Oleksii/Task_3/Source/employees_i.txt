@@ -1,0 +1,9 @@
+fixed|Bulakhtin Mickola|1|2132.5
+hourly|Sainog Oleksii|3|13.5
+fixed|Didkovska Maryna Vitaliivna|2|4305
+fixed|Golovko Andrii|4|1132.5
+hourly|Boichuk Olena|5|11.23
+hourly|Kantsedal Georgii|7|11.42
+fixed|Tarnavskii Maksim|6|2342
+fixed|Oleksienko Anna|9|3201.32
+hourly|Konopatska Sandra|13.32
