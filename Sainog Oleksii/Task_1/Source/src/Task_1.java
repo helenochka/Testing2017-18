@@ -8,6 +8,13 @@ public class Task_1 {
         return time;
     }
 
+    private static long get_time_add_into_middle(List<Integer> col, Integer elem, int iter){
+        long time = System.nanoTime();
+        col.add(iter, elem);
+        time = System.nanoTime() - time;
+        return time;
+    }
+
     private static long get_time_search(Collection<Integer> col, Integer elem){
         long time = System.nanoTime();
         col.contains(elem);
@@ -48,8 +55,9 @@ public class Task_1 {
         for(int i = 0; i < 10000; i++){
             values.add(rand.nextInt(25000));
         }
-        System.out.println("\nAdd item in not empty collection:");
-        for (Collection<Integer> col : list){
+        System.out.println("\nAdd item into middle of collection");
+        for (int i = 0; i < 2; i++){
+            List<Integer> col = (List)list.get(i);
             col.addAll(values);
             System.out.println(col.
                     getClass().
@@ -58,7 +66,7 @@ public class Task_1 {
                             ".*\\.([A-Z].*)",
                             "$1") +
                     " - " +
-                    get_time_add(col, 256) +
+                    get_time_add_into_middle(col, 256, 123) +
                     " ns.");
         }
 
