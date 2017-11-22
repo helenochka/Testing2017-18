@@ -1,0 +1,31 @@
+Add item in empty collection:
+ArrayList - 9168 ns.
+LinkedList - 2116 ns.
+TreeSet - 120948 ns.
+HashSet - 4584 ns.
+
+Add item into middle of collection
+ArrayList - 45841 ns.
+LinkedList - 15163 ns.
+
+Search for an item in a collection:
+ArrayList - 552904 ns.
+LinkedList - 650226 ns.
+TreeSet - 20804 ns.
+HashSet - 8110 ns.
+
+Remove item from collection:
+ArrayList - 59593 ns.
+LinkedList - 7053 ns.
+TreeSet - 15162 ns.
+HashSet - 13400 ns.
+
+ArrayList і LinkedList
+1 - звчайний масив
+2 - двозвязний список
+Додання елементу в кінець та в середину відбувається швидше в LinkedList у зв'язку з непотрібністю повного зсуву хвоста масиву
+Швидкість пошуку залежить від розташування елемента
+Видалення в LinkedList відбувається швидше ніж в ArrayList
+
+TreeSet і HashSet
+HashSet швидше додає, видаляє та шукає, бо працює з хеш-кодом але на відміну від TreeSet не вміє сортувати

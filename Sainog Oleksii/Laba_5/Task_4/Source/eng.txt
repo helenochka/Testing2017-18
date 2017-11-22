@@ -1,0 +1,7 @@
+Input number:
+Please, input INTEGER number!
+You're winner!!!
+Number is not within interval
+Less
+Greater
+try input number from
