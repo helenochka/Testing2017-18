@@ -32,7 +32,7 @@ namespace TestFramework.Pages
         {
             if (price == null) return this;
             MinimumPrice.SendKeys("a");
-            for (int i = 0; i < ; i++)
+            for (int i = 0; i < 5; i++)
                 MinimumPrice.SendKeys(Keys.Backspace);
             MinimumPrice.SendKeys(price.ToString());
             return this;
