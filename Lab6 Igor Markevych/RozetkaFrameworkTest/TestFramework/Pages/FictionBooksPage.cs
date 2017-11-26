@@ -25,13 +25,15 @@ namespace TestFramework.Pages
         [FindsBy(How = How.Id, Using = "submitprice")]
         public IWebElement FilterByPrice;
 
-        [FindsBy(How = How.XPath, Using = "//*[@id='price_label']")]
+        [FindsBy(How = How.Id, Using = "price_label")]
         public IWebElement Price;
 
         public FictionBooksPage SetMinimumPrice(int? price)
         {
             if (price == null) return this;
-            MinimumPrice.Clear();
+            MinimumPrice.SendKeys("a");
+            for (int i = 0; i < 5; i++)
+                MinimumPrice.SendKeys(Keys.Backspace);
             MinimumPrice.SendKeys(price.ToString());
             return this;
         }
@@ -39,23 +41,14 @@ namespace TestFramework.Pages
         public FictionBooksPage SetMaximumPrice(int? price)
         {
             if (price == null) return this;
-            MaximumPrice.Clear();
+            MaximumPrice.SendKeys("a");
+            for (int i = 0; i < 12; i++)
+                MaximumPrice.SendKeys(Keys.Backspace);
             MaximumPrice.SendKeys(price.ToString());
             return this;
         }
 
-        public FictionBooksPage SetPrice(int? price1, int? price2)
-        {
-            if (price1 == null) return this;
-            if (price2 == null) return this;
-            MinimumPrice.SendKeys(price1.ToString());
-            MaximumPrice.SendKeys(price2.ToString());
-            for (int i=0; i<12; i++)
-                MaximumPrice.SendKeys(Keys.Backspace);
-            MaximumPrice.SendKeys(price2.ToString());
-            return this;
-        }
-
+        
         public FictionBooksPage SubmitPriceFilter()
         {
             FilterByPrice.SendKeys(Keys.Enter);
