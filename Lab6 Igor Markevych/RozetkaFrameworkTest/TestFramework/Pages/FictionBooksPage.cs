@@ -32,8 +32,8 @@ namespace TestFramework.Pages
         {
             if (price == null) return this;
             MinimumPrice.SendKeys("a");
-            MinimumPrice.SendKeys(Keys.Control + "A");
-            MinimumPrice.SendKeys(Keys.Delete);
+            for (int i = 0; i < ; i++)
+                MinimumPrice.SendKeys(Keys.Backspace);
             MinimumPrice.SendKeys(price.ToString());
             return this;
         }
@@ -42,8 +42,8 @@ namespace TestFramework.Pages
         {
             if (price == null) return this;
             MaximumPrice.SendKeys("a");
-            MaximumPrice.SendKeys(Keys.Control + "A");
-            MaximumPrice.SendKeys(Keys.Delete);
+            for (int i = 0; i < 12; i++)
+                MaximumPrice.SendKeys(Keys.Backspace);
             MaximumPrice.SendKeys(price.ToString());
             return this;
         }
