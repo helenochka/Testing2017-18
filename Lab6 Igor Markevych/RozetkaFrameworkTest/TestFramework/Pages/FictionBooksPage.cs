@@ -48,7 +48,15 @@ namespace TestFramework.Pages
             return this;
         }
 
-        
+
+        public FictionBooksPage SetPrice(int? MinPrice, int?MaxPrice)
+        {
+            SetMinimumPrice(MinPrice);
+            SetMaximumPrice(MaxPrice);
+            return this;
+        }
+
+
         public FictionBooksPage SubmitPriceFilter()
         {
             FilterByPrice.SendKeys(Keys.Enter);
