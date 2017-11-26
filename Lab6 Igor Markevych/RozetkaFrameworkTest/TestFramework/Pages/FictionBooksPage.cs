@@ -1,4 +1,4 @@
-﻿using OpenQA.Selenium;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 
 namespace TestFramework.Pages
@@ -25,7 +25,7 @@ namespace TestFramework.Pages
         [FindsBy(How = How.Id, Using = "submitprice")]
         public IWebElement FilterByPrice;
 
-        [FindsBy(How = How.CssSelector, Using = ".detail-price-uah>meta")]
+        [FindsBy(How = How.XPath, Using = "//*[@id='price_label']")]
         public IWebElement Price;
 
         public FictionBooksPage SetMinimumPrice(int? price)
@@ -50,7 +50,7 @@ namespace TestFramework.Pages
             if (price2 == null) return this;
             MinimumPrice.SendKeys(price1.ToString());
             MaximumPrice.SendKeys(price2.ToString());
-            for (int i=0; i<20; i++)
+            for (int i=0; i<12; i++)
                 MaximumPrice.SendKeys(Keys.Backspace);
             MaximumPrice.SendKeys(price2.ToString());
             return this;
@@ -88,7 +88,7 @@ namespace TestFramework.Pages
 
         public int? GetPrice()
         {
-            var stringValue = Price.GetAttribute("content");
+            var stringValue = Price.Text;
             if (stringValue == null | stringValue == "")
                 return null;
             else
