@@ -1,4 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
@@ -57,7 +57,7 @@ namespace TestsUseFramework
 
             //Act
             booksResultsPage
-                .SetPrice(20,250).SubmitPriceFilter();
+                .SetMinimumPrice(20).SetMaximumPrice(250).SubmitPriceFilter();
 
             booksResultsPage.FirstElement.Click();
             
