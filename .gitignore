@@ -6,3 +6,4 @@
 *.ide
 obj
 *.suo
+packages
