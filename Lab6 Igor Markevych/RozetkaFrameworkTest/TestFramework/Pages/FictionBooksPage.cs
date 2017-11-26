@@ -19,7 +19,7 @@ namespace TestFramework.Pages
         [FindsBy(How = How.Id, Using = "price[max]")]
         public IWebElement MaximumPrice;
 
-        [FindsBy(How = How.XPath, Using = "//*[@id='catalog_goods_block']/div/div[1]/div[1]/div")]
+        [FindsBy(How = How.XPath, Using = "//*[@id='catalog_goods_block']/div/div[1]")]
         public IWebElement FirstElement;
 
         [FindsBy(How = How.Id, Using = "submitprice")]
