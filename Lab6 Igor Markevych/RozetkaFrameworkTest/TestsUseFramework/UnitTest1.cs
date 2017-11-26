@@ -59,7 +59,7 @@ namespace TestsUseFramework
             booksResultsPage
                 .SetMinimumPrice(20).SetMaximumPrice(250).SubmitPriceFilter();
 
-            booksResultsPage.FirstElement.Click();
+            booksResultsPage.FirstElement[0].Click();
             
 
             Assert.IsTrue((booksResultsPage.GetPrice()>=20) && (booksResultsPage.GetPrice() <= 250));
