@@ -19,7 +19,7 @@ namespace TestFramework.Pages
         [FindsBy(How = How.Id, Using = "price[max]")]
         public IWebElement MaximumPrice;
 
-        [FindsBy(How = How.CssSelector, Using = ".g-i-tile-i.available.with-promotion")]
+        [FindsBy(How = How.CssSelector, Using = ".g-i-tile-i.available")]
         public System.Collections.Generic.IList<IWebElement> FirstElement;
 
         [FindsBy(How = How.Id, Using = "submitprice")]
