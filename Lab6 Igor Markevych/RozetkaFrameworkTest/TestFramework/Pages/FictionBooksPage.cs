@@ -31,7 +31,7 @@ namespace TestFramework.Pages
         public FictionBooksPage SetMinimumPrice(int? price)
         {
             if (price == null) return this;
-            MinimumPrice.SendKeys("a");
+            MinimumPrice.Click();
             MinimumPrice.SendKeys(Keys.Control + "a");
             MinimumPrice.SendKeys(Keys.Delete);
             MinimumPrice.SendKeys(price.ToString());
@@ -41,14 +41,22 @@ namespace TestFramework.Pages
         public FictionBooksPage SetMaximumPrice(int? price)
         {
             if (price == null) return this;
-            MaximumPrice.SendKeys("a");
+            MaximumPrice.Click();
             MaximumPrice.SendKeys(Keys.Control + "a");
             MaximumPrice.SendKeys(Keys.Delete);
             MaximumPrice.SendKeys(price.ToString());
             return this;
         }
 
-        
+
+        public FictionBooksPage SetPrice(int? MinPrice, int?MaxPrice)
+        {
+            SetMinimumPrice(MinPrice);
+            SetMaximumPrice(MaxPrice);
+            return this;
+        }
+
+
         public FictionBooksPage SubmitPriceFilter()
         {
             FilterByPrice.SendKeys(Keys.Enter);

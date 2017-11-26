@@ -57,7 +57,7 @@ namespace TestsUseFramework
 
             //Act
             booksResultsPage
-                .SetMinimumPrice(20).SetMaximumPrice(250).SubmitPriceFilter();
+                .SetPrice(20, 250).SubmitPriceFilter();
 
             booksResultsPage.FirstElement[0].Click();
             
