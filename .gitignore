@@ -7,3 +7,5 @@
 obj
 *.suo
 packages
+bin
+obj
