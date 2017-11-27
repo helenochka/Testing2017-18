@@ -4,6 +4,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 using System;
+using System.Threading;
 using TestFramework.Pages;
 
 namespace TestsUseFramework
@@ -23,7 +24,7 @@ namespace TestsUseFramework
             driver = new ChromeDriver(options);
             driver.Navigate().GoToUrl(_url);
             new WebDriverWait(driver, TimeSpan.FromSeconds(5)).Until(d => d.Url == _url);
-            //System.Threading.Thread.Sleep(10000);
+            Thread.Sleep(10000);
         }
 
         [TestCleanup]

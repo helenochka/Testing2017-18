@@ -41,7 +41,7 @@ namespace TestFramework.Pages
             return this;
         }
 
-        public FictionBooksPage SetPrice(int? MinPrice, int?MaxPrice)
+        public FictionBooksPage SetPrice(int? MinPrice, int? MaxPrice)
         {
             SetMinimumPrice(MinPrice);
             SetMaximumPrice(MaxPrice);

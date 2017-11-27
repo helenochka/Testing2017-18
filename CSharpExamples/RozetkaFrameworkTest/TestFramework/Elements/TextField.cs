@@ -3,7 +3,7 @@ using TestFramework.Extensions;
 
 namespace TestFramework.Elements
 {
-    public class TextField : Element, IWebElement
+    public class TextField : Element
     {
         public TextField(IWebElement nativeElement) : base (nativeElement){ }
         public new void Clear()
