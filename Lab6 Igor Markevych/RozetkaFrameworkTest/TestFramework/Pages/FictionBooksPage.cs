@@ -20,7 +20,7 @@ namespace TestFramework.Pages
         public IWebElement MaximumPrice;
 
         [FindsBy(How = How.CssSelector, Using = ".g-i-tile-i.available")]
-        public System.Collections.Generic.IList<IWebElement> FirstElement;
+        public System.Collections.Generic.IList<IWebElement> Element;
 
         [FindsBy(How = How.Id, Using = "submitprice")]
         public IWebElement FilterByPrice;
