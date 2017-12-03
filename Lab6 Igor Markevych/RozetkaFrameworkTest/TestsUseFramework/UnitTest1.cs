@@ -1,4 +1,4 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
@@ -21,7 +21,7 @@ namespace TestsUseFramework
 
             driver = new ChromeDriver(options);
             driver.Navigate().GoToUrl(_url);
-            new WebDriverWait(driver, TimeSpan.FromSeconds(5)).Until(d => d.Url == _url);
+            new WebDriverWait(driver, TimeSpan.FromSeconds(15)).Until(d => d.Url == _url);
             System.Threading.Thread.Sleep(10000);
         }
 
@@ -49,20 +49,22 @@ namespace TestsUseFramework
         }
 
         [TestMethod]
-        public void Sortbyprice()
+        public void FilterByPrice()
         {
             //Arrange
             var booksResultsPage = new FictionBooksPage(driver);
-            //var priceValueToSet = 20;
+            var bookPage = new FictionSingleBookPage(driver);
+            var minpriceValueToSet = 20;
+            var maxpriceValueToSet = 250;
 
             //Act
             booksResultsPage
-                .SetPrice(20, 250).SubmitPriceFilter();
+                .SetPrice(minpriceValueToSet, maxpriceValueToSet).SubmitPriceFilter();
 
-            booksResultsPage.FirstElement[0].Click();
+            booksResultsPage.Element[0].Click();
             
 
-            Assert.IsTrue((booksResultsPage.GetPrice()>=20) && (booksResultsPage.GetPrice() <= 250));
+            Assert.IsTrue((bookPage.GetPrice()>=minpriceValueToSet) && (bookPage.GetPrice() <= maxpriceValueToSet));
     }
     }
 }
