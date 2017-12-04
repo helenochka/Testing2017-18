@@ -22,7 +22,7 @@ namespace TestsUseFramework
             driver = new ChromeDriver(options);
             driver.Navigate().GoToUrl(_url);
             new WebDriverWait(driver, TimeSpan.FromSeconds(15)).Until(d => d.Url == _url);
-            System.Threading.Thread.Sleep(10000);
+            //System.Threading.Thread.Sleep(10000);
         }
 
         [TestCleanup]
